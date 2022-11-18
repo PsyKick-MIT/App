@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+.logo-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* .logo-center #computer {
+	float: right;
+	position: absolute;
+} */
+
+.computer-wrapper {
+	margin-bottom: 5em;
+    display: flex;
+    margin-right: 0.6em;
+    position: absolute;
+}
+
+.logo-center img {
+	width: 3em;
+}
+
+.logo-center h1 {
+	font-family: Montserrat,'Courier New', Courier, monospace;
+	letter-spacing: 0.2em;
+	font-size: 5em;
+}
+
+.logo-center-wrapper {
+	height: 80vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 4.9rem;
+}
+
+.main-wrapper-bottom {
+    margin-top: -2em;
+    display: flex;
+    margin-left: 9.8em;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+#logo-yoga {
+	width: 6em;
+    margin-left: -1.25em;
+    margin-bottom: -1.25em;
+}

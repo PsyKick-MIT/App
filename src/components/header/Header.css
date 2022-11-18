@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+* {
+	color: white;
+}
+header {
+	display:  flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 20vh;
+}
+
+ul {
+	display: inline-block;
+	list-style: none;
+}
+
+ul li {
+	display: inline;
+	margin: 2rem;
+}
+
+ul li > a {
+	font-family: Montserrat, 'Courier New', Courier, monospace;
+	font-size: 1.25em;
+	/* color: black; */
+	text-decoration: none;
+}
+
+.logo {
+	margin-inline-start: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo > h1 {
+	letter-spacing: 0.05em;
+	line-height: 1em;
+	text-align: center;
+	font-size: 2.5em;
+	font-family: 'Montserrat', 'Courier New', Courier, monospace;
+	font-weight: 800;
+}
+
+.logo > img {
+	position: absolute;
+	width: 3rem;
+	z-index: 2;
+}
