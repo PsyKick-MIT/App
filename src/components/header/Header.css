@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
 * {
-	color: white;
+	color: ghostwhite;
 }
 header {
 	display:  flex;
@@ -27,6 +27,7 @@ ul li > a {
 }
 
 .logo {
+	filter: drop-shadow(2px 4px 6px black);
 	margin-inline-start: 2rem;
 	display: flex;
 	justify-content: center;
