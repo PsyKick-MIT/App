@@ -3,7 +3,7 @@ import Logo from "./center/Logo";
 import './Main.css'
 export default function Main() {
 	const style = {
-		backgroundImage: "url(/background.png)",
+		backgroundImage: "url(/background.svg)",
 		backgroundSize: 'cover',
 		backgroundRepeat: 'no-repeat',
 	};
