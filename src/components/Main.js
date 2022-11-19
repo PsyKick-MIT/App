@@ -4,7 +4,7 @@ import './Main.css'
 export default function Main() {
 	const style = {
 		background: "url(/background.svg) fixed",
-		backgroundSize: cover
+		backgroundSize: "cover"
 	};
 	return (
 		<div style={style} className="Main">
