@@ -9,36 +9,48 @@ function Logo() {
 	const [input, setInput] = useState(0);
 	let logoCenter = document.querySelector(".logo-center > div");
 	let searchBox = document.querySelector("#searchBox");
+	let searchBtn = document.querySelector("#search-btn");
+
+	const btnStyle = {
+		opacity: "0"
+	};
+
 	useEffect(() => {
-		searchBox = document.querySelector("#searchBox");
 		logoCenter = document.querySelector(".logo-center > div");
+		searchBox = document.querySelector("#searchBox");
+		searchBtn = document.querySelector("#search-btn");
+		if (logoCenter == undefined || searchBox == undefined || searchBtn == undefined) return;
 		if (!focus) {
 			logoCenter.style.opacity = 1;
 			searchBox.style.opacity = 0;
 		} else if (input == "") {
 			logoCenter.style.opacity = 1;
 			searchBox.style.opacity = 0;
+			searchBtn.style.opacity = 0;
 		}
-		console.log(focus);
+
+		if (input != "") {
+			searchBtn.style.opacity = 1;
+		}
 	});
 	return (
 		<div className='logo-center-wrapper'>
 			<div className='logo-center' id="logo-center"
-			 onMouseEnter={() => {
-				logoCenter.style.opacity = 0;
-				searchBox.style.opacity = 1;
-			 }}
-				onMouseLeave={() => {
-					
-				if (!focus) {
-					logoCenter.style.opacity = 1;
-					searchBox.style.opacity = 0;
-				} else if (input == "") {
-					logoCenter.style.opacity = 1;
-					searchBox.style.opacity = 0;
-				}
+				onMouseEnter={() => {
+					logoCenter.style.opacity = 0;
+					searchBox.style.opacity = 1;
 				}}
-				>
+				onMouseLeave={() => {
+
+					if (!focus) {
+						logoCenter.style.opacity = 1;
+						searchBox.style.opacity = 0;
+					} else if (input == "") {
+						logoCenter.style.opacity = 1;
+						searchBox.style.opacity = 0;
+					}
+				}}
+			>
 				<div>
 					<img src={yogaslit} alt="Statue" id="logo-yoga"></img>
 					<h1>
@@ -58,6 +70,7 @@ function Logo() {
 						if (focus == 0) setFocus(1);
 						setInput(el.target.value);
 					}} type="text" placeholder='Search'></input>
+					<button style={btnStyle} type="submit" onClick={() => window.location.replace("/#result")} id="search-btn">Solution!</button>
 				</div>
 			</div>
 

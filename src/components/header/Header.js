@@ -6,11 +6,11 @@ function Header() {
 		<header>
 			<span className='logo'>
 				<h1>PS<br></br>YK</h1>
-				<img src={interLogo}></img>
+				<img src={interLogo} alt="logo"></img>
 			</span>
 			<ul>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#">About Us</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li><a href="#about">About Us</a></li>
 			</ul>
 		</header>
 	);
