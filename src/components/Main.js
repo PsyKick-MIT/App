@@ -5,7 +5,10 @@ import Contact from "./contact/Contact";
 import About from "./about/About";
 
 import './Main.css'
+import { useState } from "react";
 export default function Main() {
+
+	const [fetchedData, setFetchData] = useState([]);
 
 	const style = {
 		background: "url(/background.svg) fixed",
@@ -15,10 +18,10 @@ export default function Main() {
 		<main style={style} className="Main">
 			<section id="main-1">
 				<Header />
-				<Logo />
+				<Logo data={setFetchData}/>
 			</section>
 			<section id="result">
-				<Result />
+				<Result data={fetchedData}/>
 			</section>
 			<section id="contact">
 				<Contact />

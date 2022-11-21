@@ -3,13 +3,19 @@ import yogaslit from './yoga-slit.svg'
 import { useState, useEffect } from "react";
 import './Logo.css'
 
-function Logo() {
+function Logo(props) {
 
 	const [focus, setFocus] = useState("");
 	const [input, setInput] = useState(0);
 	let logoCenter = document.querySelector(".logo-center > div");
 	let searchBox = document.querySelector("#searchBox");
 	let searchBtn = document.querySelector("#search-btn");
+
+	const update = async (func) => {
+			const response = await fetch("https://api-psykick.herokuapp.com/questions");
+			const jsonData = await response.json();
+			func(jsonData['questions']);
+	}
 
 	const btnStyle = {
 		opacity: "0"
@@ -70,7 +76,7 @@ function Logo() {
 						if (focus == 0) setFocus(1);
 						setInput(el.target.value);
 					}} type="text" placeholder='Search'></input>
-					<button style={btnStyle} type="submit" onClick={() => window.location.replace("/#result")} id="search-btn">Solution!</button>
+					<button style={btnStyle} type="submit" onClick={() => { update(props.data);  window.location.replace("/#result")}} id="search-btn">Solution!</button>
 				</div>
 			</div>
 
