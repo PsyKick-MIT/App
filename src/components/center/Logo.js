@@ -12,9 +12,26 @@ function Logo(props) {
 	let searchBtn = document.querySelector("#search-btn");
 
 	const update = async (func) => {
-			const response = await fetch("https://api-psykick.herokuapp.com/questions");
-			const jsonData = await response.json();
-			func(jsonData['questions']);
+		func("<h1 id=\"wait-text\"> Please Wait...</h1>");
+		let search = searchBox.querySelector('input').value;
+		let response = await fetch("https://api-psykick.herokuapp.com/questions/" + search);
+		searchBox.querySelector('input').value = "";
+		setFocus(0);
+		let jsonData = await response.json();
+		let data = "";
+		let ans = "";
+		for (const entry of jsonData['questions']) {
+			data += "<details>";
+			data += "<summary>" + entry + "</summary>";
+			response = await fetch("https://api-psykick.herokuapp.com/answer/" + entry);
+			let jsonData2 = await response.json();
+			ans = jsonData2['answer'];
+			data += "<p>" + ans + "<p>";
+			data += "</details>";
+			func(data);
+		}
+		console.log(data);
+
 	}
 
 	const btnStyle = {
@@ -76,7 +93,7 @@ function Logo(props) {
 						if (focus == 0) setFocus(1);
 						setInput(el.target.value);
 					}} type="text" placeholder='Search'></input>
-					<button style={btnStyle} type="submit" onClick={() => { update(props.data);  window.location.replace("/#result")}} id="search-btn">Solution!</button>
+					<button style={btnStyle} type="submit" onClick={() => { update(props.data); window.location.replace("/#result") }} id="search-btn">Solution!</button>
 				</div>
 			</div>
 

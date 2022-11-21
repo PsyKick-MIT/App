@@ -1,0 +1,56 @@
+.result-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.result-wrapper > * {
+	font-family: Montserrat, 'Courier New', Courier, monospace;
+}
+
+.result-wrapper > h1 {
+	letter-spacing: 0.5em;
+	color: rgba(0, 0, 0, 0.9);
+	width: 50%;
+	text-align: center;
+	font-size: 3em;
+	/* background: rgba(255, 0255, 255, 0.5);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px); */
+	filter: drop-shadow(0px 0px 5px, black);
+
+}
+
+.result-wrapper > div > details {
+	width: 50vw;
+	background: rgba(255, 255, 255, 0.75);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	filter: drop-shadow(0px 0px 5px, black);
+	border-radius: 0.75rem;
+	margin-block: 1em;
+	padding: 1em;
+}
+
+.result-wrapper summary {
+	font-family: Montserrat, 'Courier New', Courier, monospace;
+	font-size: 1em;
+	font-weight: 600;
+}
+.result-wrapper details > p {
+	margin: 0.5em;
+	letter-spacing: 0.05em;
+	text-align: justify;
+	font-family: Montserrat, 'Courier New', Courier, monospace;
+	font-size: 1em;
+	font-weight: 500;
+}
+
+.result-wrapper *  {
+	
+	
+	color: black;
+}
