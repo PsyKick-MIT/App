@@ -16,7 +16,7 @@ header {
 	justify-content: space-between;
 	height: 15vh;
 	position: sticky;
-	top: 0;
+	/* top: 0; */
     width: 100%;
 	z-index: 1;
 }

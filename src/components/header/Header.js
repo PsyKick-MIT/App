@@ -4,7 +4,9 @@ import interLogo from './inter-logo.svg'
 function Header() {
 	return (
 		<header>
-			<span className='logo'>
+			<span className='logo' onClick={() => {
+				window.location.replace("#main-1");
+			}}>
 				<h1>PS<br></br>YK</h1>
 				<img src={interLogo} alt="logo"></img>
 			</span>

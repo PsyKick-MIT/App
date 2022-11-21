@@ -21,12 +21,15 @@ export default function Main() {
 				<Logo data={setFetchData}/>
 			</section>
 			<section id="result">
+				<Header />
 				<Result data={fetchedData}/>
 			</section>
 			<section id="contact">
+				<Header />
 				<Contact />
 			</section>
 			<section id="about">
+				<Header />
 				<About />
 			</section>
 		</main>
