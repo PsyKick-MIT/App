@@ -12,7 +12,8 @@ export default function Main() {
 
 	const style = {
 		background: "url(/background.svg) fixed",
-		backgroundSize: "cover"
+		backgroundSize: "cover",
+		backgroundPosition: "center"
 	};
 	return (
 		<main style={style} className="Main">
