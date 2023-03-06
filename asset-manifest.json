@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/App/static/css/main.c4c52068.css",
+    "main.js": "/App/static/js/main.63858e76.js",
+    "static/js/787.c1112931.chunk.js": "/App/static/js/787.c1112931.chunk.js",
+    "static/media/inter-logo.svg": "/App/static/media/inter-logo.ce4011ac55fc9eed99b46ffa09b42c27.svg",
+    "static/media/yoga-slit.svg": "/App/static/media/yoga-slit.397c9879e381c9c4f8a21173fa863ad1.svg",
+    "static/media/mini-computer.svg": "/App/static/media/mini-computer.ca98e9d0933fdd11681ab38a9800ca6b.svg",
+    "index.html": "/App/index.html",
+    "main.c4c52068.css.map": "/App/static/css/main.c4c52068.css.map",
+    "main.63858e76.js.map": "/App/static/js/main.63858e76.js.map",
+    "787.c1112931.chunk.js.map": "/App/static/js/787.c1112931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c4c52068.css",
+    "static/js/main.63858e76.js"
+  ]
+}
