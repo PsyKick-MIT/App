@@ -7,6 +7,7 @@ function Logo(props) {
 
 	const [focus, setFocus] = useState("");
 	const [input, setInput] = useState(0);
+	const API = "https://psykick-api.onrender.com/"
 	let logoCenter = document.querySelector(".logo-center > div");
 	let searchBox = document.querySelector("#searchBox");
 	let searchBtn = document.querySelector("#search-btn");
@@ -14,7 +15,7 @@ function Logo(props) {
 	const update = async (func) => {
 		func("<h1 id=\"wait-text\"> Please Wait...</h1>");
 		let search = searchBox.querySelector('input').value;
-		let response = await fetch("https://api-psykick.herokuapp.com/questions/" + search);
+		let response = await fetch(API + "questions/" + search);
 		searchBox.querySelector('input').value = "";
 		setFocus(0);
 		let jsonData = await response.json();
@@ -23,7 +24,7 @@ function Logo(props) {
 		for (const entry of jsonData['questions']) {
 			data += "<details>";
 			data += "<summary>" + entry + "</summary>";
-			response = await fetch("https://api-psykick.herokuapp.com/answer/" + entry);
+			response = await fetch(API + "answer/" + entry);
 			let jsonData2 = await response.json();
 			ans = jsonData2['answer'];
 			data += "<p>" + ans + "<p>";
